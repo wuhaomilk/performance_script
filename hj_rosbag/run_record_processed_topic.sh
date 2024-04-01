@@ -19,5 +19,6 @@ cd $ROSBAG_STORE_PATH
 now=$(date +"%Y-%m-%d-%H-%M-%S")
 rosbag_name=$now.bag
 
-rosbag record -a --split --size=500 --max-splits=5 -O $rosbag_name   # 500M split.最多存5个文件
+#./hj_rosbag record -a --split --size=500 --max-splits=5 -O $rosbag_name   # 500M split.最多存5个文件
+./hj_rosbag record -a --min-space=500M -O $rosbag_name
 
